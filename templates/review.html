@@ -1,0 +1,306 @@
+{% extends 'base-new.html' %}
+{% block title %}回饋問卷{% endblock title %}
+{% block content %}
+<!--<div class="container-fluid">
+  <div class="activity-img">
+    <img src="/static/img/bg1.jpg" class="activity-img-img">
+  </div>
+</div>-->
+<div class="container-fluid p-3 bg-light">
+    <div class="act-question quest" id="act-question">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-5 col-sm-12 review m-3">
+                <div class="text-center">
+                    <h3 class="activityName"></h3>
+                </div>
+                <hr>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-12 review-title">總體</div>
+                        <div class="col-12 pl-5 Stars">
+                            <div class="btn-star" id="1">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="btn-star" id="2">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="btn-star" id="3">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="btn-star" id="4">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="btn-star selected" id="5">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">價錢</div>
+                        <div class="col-12 pl-5 Price">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">音效</div>
+                        <div class="col-12 pl-5 Music">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">流程</div>
+                        <div class="col-12 pl-5 Flow">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">氣氛</div>
+                        <div class="col-12 pl-5 Vibe">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">燈光</div>
+                        <div class="col-12 pl-5 Light">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">動線</div>
+                        <div class="col-12 pl-5 Moveline">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">地點</div>
+                        <div class="col-12 pl-5 Site">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title">工作人員</div>
+                        <div class="col-12 pl-5 Staff">
+                          <div class="btn-star" id="1">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="2">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star" id="4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="btn-star selected" id="5">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title mb-2">意見回饋</div>
+                        <div class="col-12 pl-4 pr-2">
+                            <textarea class="form-control" id="Description" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-primary-2 ml-2 quest btn-block btn-lg"
+                            id="submitques">送出問卷</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+      <div class="modal modal-review" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title title">活動評分</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 review-title">總體</div>
+                        <div class="col-12 pl-5">
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title mb-2">意見回饋</div>
+                        <div class="col-12 pl-4 pr-4">
+                            <textarea class="form-control" id="Description" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-2">送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+<!--
+      <div class="modal modal-review" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title title">活動評分</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 review-title">總體</div>
+                        <div class="col-12 pl-5">
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="btn-star-2">
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 review-title mb-2">意見回饋</div>
+                        <div class="col-12 pl-4 pr-4">
+                            <textarea class="form-control" id="Description" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-2">送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/review.js') }}?version=1.1"></script>
+{% endblock script %}

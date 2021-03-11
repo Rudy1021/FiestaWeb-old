@@ -1,0 +1,145 @@
+@charset "UTF-8";
+body * {
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "微軟正黑體";
+}
+
+.card-body {
+  line-height: 3rem;
+}
+.card-body .tag {
+  float: left;
+  background: #d0f1eb;
+  color: #155c3b;
+  margin-right: 0.5rem;
+  height: 2rem;
+  line-height: 0rem;
+  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0 0.8rem 0 0.1rem;
+  margin-top: 0.5rem;
+}
+
+.li-2 {
+  line-height: 2rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #EB5F36;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #EB5F36;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(35px);
+  -ms-transform: translateX(35px);
+  transform: translateX(35px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.bg-gradient-primary {
+  background: #f19579 !important;
+  background-image: none !important;
+}
+
+.text-main {
+  color: #EB5F36 !important;
+}
+
+.all-title {
+  border-left: 4px solid #EB5F36;
+  padding-left: 1rem;
+}
+
+.btn-main {
+  background: #EB5F36 !important;
+  border-color: #EB5F36 !important;
+}
+
+span.id {
+  display: none !important;
+}
+
+div.edit {
+  display: none;
+}
+
+.lh-2 {
+  line-height: 2rem !important;
+}
+
+.btn-up {
+  margin-top: -1rem;
+}
+
+.font-09 {
+  font-size: 0.9rem;
+}
+
+.authid {
+  display: none;
+}
+
+.del-schedule, .del-ticket, .del-lotte, .ticketid, .scheduleid, .lotteid {
+  display: none !important;
+}
+
+textarea {
+  resize: none !important;
+}
+
+.edit-models {
+  display: none;
+}
+
+/*# sourceMappingURL=style-dashboard.css.map */

@@ -1,0 +1,309 @@
+{% extends 'base2.html' %}
+{% block title %}
+問卷總覽
+{% endblock title %}
+{% block content %}
+
+<div class="container-fluid survey">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800 all-title act-title"></h1>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-11">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-main">
+                        問卷回覆 <span class="badge badge-pill badge-secondary"></span>
+                    </h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">
+                                選擇動作
+                            </div>
+                            <a class="dropdown-item to-edit" href="javascript:;">
+                                編輯
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            總體
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="stars1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="stars2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="stars3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="stars4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="stars5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                          平均 <span class="starAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            價錢
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="price1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="price2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="price3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="price4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="price5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="priceAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            音效
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="music1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="music2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="music3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="music4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="music5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="musicAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            流程
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="flow1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="flow2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="flow3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="flow4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="flow5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="flowAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            氣氛
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="vibe1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="vibe2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="vibe3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="vibe4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="vibe5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="vibeAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            燈光
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="light1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="light2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="light3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="light4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="light5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="lightAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            動線
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="moveline1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="moveline2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="moveline3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="moveline4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="moveline5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="movelineAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            地點
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="site1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="site2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="site3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="site4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="site5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="siteAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-12">
+                            工作人員
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i>
+                            <span>(</span><span class="staff1">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="staff2">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="staff3">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="staff4">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-2 col-sm-12">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(</span><span class="staff5">0</span><span>)</span>
+                        </div>
+                        <div class="col-lg-1 col-sm-12">
+                            平均 <span class="staffAvg">0</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12">
+                            意見回饋
+                        </div>
+                        <div class="col-12 feedbackBox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='dashboard/js/survey.js') }}"></script>
+{% endblock script %}

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="Expires" content="0" />
+  <title>Fiesta</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- <link rel="icon" href="{{ url_for('static',filename='img/new-logo.png') }}" type="image/x-icon" /> -->
+  <!-- Custom fonts for this template -->
+  <link href="{{ url_for('static',filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+    type="text/css">
+  <link href="{{ url_for('static',filename='css/webfont/webfont.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/style.css') }}?version=1.13" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/agency.css') }}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <section class="content-section pb-5" id="bg-fiesta-img">
+      <div class="check-user fail">
+        <div class="title"><i class="fas fa-user-times"></i> 驗證失敗！</div>
+        <div>請重新寄送一次驗證信</div>
+        <button class="btn btn-primary mb-1 buttonclick">返回首頁</button>
+    </div>
+      <div class="check-user success">
+          <div class="title"><i class="fas fa-user-check"></i> 驗證成功！</div>
+          <div>恭喜您完成驗證，所有功能已開通完畢，快使用Fiesta參加或建立一個活動吧！</div>
+          <button class="btn btn-primary mb-1 buttonclick">馬上使用</button>
+      </div>
+    </section>
+  <script src="{{ url_for('static',filename='vendor/jquery/jquery.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/finish.js') }}?version=1.20"></script>
+  <!---->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBH8EQ4pqzmqCvLaCDVy6zgtbyMN9tjAP0",
+      authDomain: "fiesta-c7f35.firebaseapp.com",
+      databaseURL: "https://fiesta-c7f35.firebaseio.com",
+      projectId: "fiesta-c7f35",
+      storageBucket: "fiesta-c7f35.appspot.com",
+      messagingSenderId: "1058250559348",
+      appId: "1:1058250559348:web:2d13d469d8cc033b6ba621",
+      measurementId: "G-G140WH8E27"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+﻿{% extends 'base.html' %}
+{% block title %}{{ act_Name }}{% endblock title %}
+{% block content %}
+<section class="content-section bg-light" id="showActivity">
+  <div class="container-fluid">
+    <div class="showAct2">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8 col-sm-12  showAct-area">
+          <div class="row">
+            <div class="col">
+              <h5 class="all-title" id="title"></h5>
+              <hr>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col">
+              <img src="" class="d-block mb-2 text-center mw-100" id="act-img">
+              <div class="row clear-float my-3">
+                <div class="col-lg-7 col-sm-12">
+                  <h6 class="ml-3" id="startTime">開始時間</h6>
+                  <h6 class="ml-3" id="endTime">結束時間</h6>
+                </div>
+                <div class="col-lg-5 col-sm-12" id="taglist"></div>
+              </div>
+              <hr>
+              <h6>活動簡介</h6>
+              <div class="ml-2 lh-1 my-3 text-secondary text-justify" id="act_Description"></div>
+            </div>
+          </div>
+          <div class="row  float-right">
+          </div>  
+          <div class="row clear-float">
+            <div class="col" id="ticketist">
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!----------------------活動問卷----------------------->
+    <!------------------------------ real-time ------------------------------->
+    <div class="real-time mt-3" id="real-time">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8 col-sm-12 clickback">
+          <h5 class="all-title">即時資訊</h5>
+          <hr>
+          <div class="real-time-area">
+            <div class="row">
+              <div class="col schelist">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="text-center">
+      </div>
+    </div>
+    <div class="lotte-user" id="lotte-user">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8 col-sm-12 clickback">
+          <h5 class="all-title">抽獎名單</h5>
+          <hr>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary ml-2 emailtest joinClick" id="joinClick">參加</button>
+        <button type="button" class="btn btn-primary ml-2 join-btn" data-toggle="modal" data-target="#RemarkModal" style="display:none;">join</button>
+      </div>
+  </div>
+   <div class="modal fade" id="RemarkModal" tabindex="-1" role="dialog" aria-labelledby="RemarkModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="RemarkModalLabel">參加活動</h5>
+           <button type="button" class="close close-sub" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body modal-Remark">
+           <textarea class="form-control" id="Remark" placeholder="輸入備註(非必填)"></textarea>
+         </div>
+         <div class="modal-footer">
+              <div class="text-center">
+                    <button type="button" class="btn btn-primary tick-sub">送出</button>
+               </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/showAct.js') }}?version=1.24"></script>
+{% endblock %}

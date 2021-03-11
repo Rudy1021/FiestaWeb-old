@@ -1,0 +1,137 @@
+{% extends 'base2.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800 all-title">活動進階模組</h1>
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-lg-3">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-main">
+                        進階模組設定
+                    </h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">
+                                選擇動作
+                            </div>
+                            <a class="dropdown-item to-edit modlist" href="javascript:;">
+                                編輯
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body modlist">
+                    <div class="row pl-3">
+                        <div class="col lh-2">
+                            <p>
+                                <input type="checkbox" id="mod1" name="mod" value="1" class="check-mod" disabled>
+                                <label for="mod1">統計人數</label><br>
+                                <input type="checkbox" id="mod3" name="mod" value="3" class="check-mod" disabled>
+                                <label for="mod3">票卷</label><br>
+                                <input type="checkbox" id="mod4" name="mod" value="4" class="check-mod" disabled>
+                                <label for="mod4">活動排程</label><br>
+                                <input type="checkbox" id="mod5" name="mod" value="5" class="check-mod" disabled>
+                                <label for="mod5">即時資訊</label><br>
+                                <input type="checkbox" id="mod6" name="mod" value="6" class="check-mod" disabled>
+                                <label for="mod6">抽獎</label><br>
+                                <input type="checkbox" id="mod8" name="mod" value="8" class="check-mod" disabled>
+                                <label for="mod8">問卷</label><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center edit-models">
+                        <button class="btn btn-dark cancel-edit models">取消</button>　<button class="btn btn-primary btn-main save models">儲存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-main">
+                        排程設定
+                    </h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">
+                                選擇動作
+                            </div>
+                            <a class="dropdown-item to-edit show" href="javascript:;">
+                                編輯
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body showlist">
+                    <span class="closeschedule">尚未開啟排程模組</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-7 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-main">
+                        票券設定
+                    </h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">
+                                選擇動作
+                            </div>
+                            <a class="dropdown-item to-edit ticket" href="javascript:;">
+                                編輯
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body ticketlist">
+                    <span class="closeticket">尚未開啟票卷模組</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-main">
+                        抽獎設定
+                    </h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">
+                                選擇動作
+                            </div>
+                            <a class="dropdown-item to-edit lotte" href="javascript:;">
+                                編輯
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body lottelist">
+                    <span class="closelotte">尚未開啟抽獎模組</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='dashboard/js/model.js') }}?version=1.38"></script>
+{% endblock script %}

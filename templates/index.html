@@ -1,0 +1,342 @@
+﻿{% extends 'base.html' %}
+{% block title %}Fiesta{% endblock title %}
+{% block content %}
+
+<!-- Header -->
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text pt-250">
+      <div class="row">
+        <div class="col-2">
+          <img src="/static/img/new-logo.png" class="w-100 float-left">
+        </div>
+      </div>
+      <div class="text-black font-size-5 text-left">
+        Fiesta 大學生的活動幫手
+      </div>
+      <div class="text-black pt-3 font-size-4 text-left">
+        O2O 社群網路X 活動籌備資訊整合平台
+      </div>
+      <!--
+      <a class="btn btn-xl btn-radius js-scroll-trigger float-left btn-purple btn-rm btn-size" href="#services">Read
+        More</a>-->
+    </div>
+  </div>
+</header>
+
+<!-- About -->
+<section class="content-section" id="about">
+  <div class="container-fluid">
+    <div class="hot-activity row justify-content-md-center mb-3">
+      <div class="col-3">
+        <hr>
+      </div>
+      <div class="col-6">
+        <div class="text-center big-title"><i class="dripicons dripicons-broadcast"></i>　近期熱門活動</div>
+      </div>
+      <div class="col-3">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10 col-sm-12">
+        <div id="carouselAds" class="carousel mt-2" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselAds" data-slide-to="0" class="active default"></li>
+          </ol>
+          <div class="carousel-inner Ads">
+            <div class="carousel-item active default">
+              <div class="adv-show-img">
+                <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="d-block w-100 h-500" alt="...">
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselAds" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselAds" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!--
+          <div class="col">
+            <span class="font-1 float-left"><i class="dripicons dripicons-location"></i> 高雄市楠梓區</span>
+            <span class="font-1 float-right"><i class="dripicons dripicons-calendar"></i> 2020-09-10(一) 00:00
+            </span>
+            <div class="font-2 clear-float adv-show">
+              當你搞懂後就會明白了。所謂貓，關鍵是貓需要如何解讀。貓勢必能夠左右未來。若能夠洞悉貓各種層面的含義，勢必能讓思維再提高一個層級。本人也是經過了深思熟慮，在每個日日夜夜思考這個問題。巴爾扎克曾講過，人生有些關口非狠狠地鬥一下不可，不能為了混口飯吃而蹉跎了幸福。這不禁令我深思。            
+            </div>
+            <div class="btn btn-success float-right mt-2 btn-block">立即購票</div>
+            <div class="tag-show">
+              <div class="tag-box">展覽</div>
+              <div class="tag-box">快閃</div>
+              <div class="tag-box">公益</div>
+              <div class="tag-box">桌遊</div>              
+              <div class="tag-box">系學會</div>
+            </div>            
+          </div>
+        </div>-->
+        <div class="col-lg-1"></div>
+      </div>
+</section>
+<div class="segment"></div>
+<!-- Aroud You -->
+<section class="content-section bg-light around-bg" id="around">
+  <div class="container-fluid">
+    <div class="hot-activity row justify-content-md-center mb-3">
+      <div class="col-3">
+        <hr>
+      </div>
+      <div class="col-6">
+        <div class="text-center big-title"><i class="dripicons dripicons-jewel"></i>　推薦活動</div>
+      </div>
+      <div class="col-3">
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-md-center top-1">
+      <div class="col-1"></div>
+      <div class="col">
+        <span class="font-3 all-title ml-2">您可能喜歡的活動</span>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <div id="carouselLike" class="carousel slide" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="false">
+              <div class="card-deck-area-1">
+              </div>
+            </div>
+            <div class="carousel-item" data-interval="false">
+              <div class="card-deck-area-2">
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev carousel-control-prev-2 control-1" href="#carouselLike"
+            role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next  carousel-control-next-2 control-1" href="#carouselLike"
+            role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+  <br>
+  <!-- Local Show -->
+  <div class="container-fluid">
+    <div class="row justify-content-md-center top-1">
+      <div class="col-1"></div>
+      <div class="col">
+        <span class="font-3 all-title ml-2">您周遭的活動</span>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col mb-3">
+        <div id="carouselAround" class="carousel slide" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="false">
+              <div class="card-deck-area" id="card-deck-1">
+                <a href="#">
+                  <span class="card">
+                    <div class="card-img-2">
+                      <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                    </div>
+                    <span class="card-body">
+                      <div class="card-title">尚無活動
+                      </div>
+                      <div class="card-title-2"></div>
+                      <div class="card-text"></div>
+                      <div class="card-date"><small class="text-muted"></small></div>
+                    </span>
+                  </span>
+                </a>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="carousel-item" data-interval="false">
+              <div class="card-deck-area" id="card-deck-2">
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+                <span class="card">
+                  <div class="card-img-2">
+                    <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img-top" alt="...">
+                  </div>
+                  <span class="card-body">
+                    <div class="card-title">尚無活動
+                    </div>
+                    <div class="card-title-2"></div>
+                    <div class="card-text"></div>
+                    <div class="card-date"><small class="text-muted"></small></div>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev carousel-control-prev-2" href="#carouselAround" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next carousel-control-next-2" href="#carouselAround" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+
+
+  <form class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalLabel"
+    aria-hidden="true" method="POST">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">尚無活動</h5> <span class="badge badge-pill badge-success float-right ml-3 mt-05">
+            熱賣中</span>
+          <br>
+          <button class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 mb-3">
+                <img src="{{ url_for('static',filename='img/bg1.jpg') }}" class="card-img" alt="...">
+              </div>
+              <div class="col-lg-6 col-sm-12">
+                <div class="modal-title-1">尚無活動</div>
+                <div class="follow">
+                  <button class="btn btn-primary btn-radius">
+                    <div class="far fa-bell"></div>
+                  </button>
+                </div>
+                <hr>
+                <div class="time mb-2"><span class="bold-title">日期 : </span>20/02/02 Sun</div>
+
+                <div class="describe"><span class="bold-title">時程 :</span><br>
+                  <div class="text">
+                    <div>08:00-09:00 Lunch at factory</div>
+                    <div>08:00-09:00 Company’s introduction</div>
+                    <div>08:00-09:00 Factory tour</div>
+                    <div>08:00-09:00 Return to PP</div>
+                    <div>08:00-09:00 Dinner in PP</div>
+                  </div>
+                </div>
+                <button class="btn btn-danger btn-radius btn-cart">
+                  <div class="fas fa-cart-plus"></div>
+                </button>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col">
+                <div class="location"><span class="bold-title">活動位置 : </span><br>
+                  <span class="text">高雄市楠梓區楠梓街123號</span>
+                </div>
+                <div class="describe"><span class="bold-title">活動簡介 :</span><br>
+                  <span class="text">
+                    尚無活動
+                  </span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+  </form>
+  <!--<i class="fas fa-caret-up fa-3x fa-inverse"></i>-->
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/index.js') }}?version=1.13"></script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="content-section pb-5" id="bg-fiesta-img">
+  <div class="check-user success">
+      <div class="title"><i class="fas fa-clipboard-check"></i> 驗票成功！</div>
+      <div>即將回到主畫面，請稍候...</div>
+  </div>
+    <div class="check-user fail">
+      <div class="title"><i class="fas fa-clipboard-check"></i> 驗票失敗！</div>
+      <div>請確認是否有參加此活動！</div>
+      <div>即將回到主畫面，請稍候...</div>
+  </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/success.js') }}?version=1.12"></script>
+{% endblock script %}s

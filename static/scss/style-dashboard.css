@@ -1,0 +1,264 @@
+@charset "UTF-8";
+body * {
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "微軟正黑體";
+}
+
+.card-body {
+  line-height: 3rem;
+}
+.card-body .tag {
+  background: #d0f1eb;
+  border-radius: 0 0.8rem 0 0.1rem;
+  color: #155c3b;
+  float: left;
+  height: 2rem;
+  line-height: 0;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.li-2 {
+  line-height: 2rem;
+}
+
+.switch {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 60px;
+}
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.slider {
+  -webkit-transition: 0.4s;
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round::before {
+  border-radius: 50%;
+}
+.slider::before {
+  -webkit-transition: 0.4s;
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 18px;
+}
+
+input:checked + .slider {
+  background-color: #eb5f36;
+}
+input:checked + .slider::before {
+  -ms-transform: translateX(35px);
+  -webkit-transform: translateX(35px);
+  transform: translateX(35px);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #eb5f36;
+}
+
+.bg-gradient-primary {
+  background: #f19579 !important;
+  background-image: none !important;
+}
+
+.text-main {
+  color: #eb5f36 !important;
+}
+
+.all-title {
+  border-left: 4px solid #eb5f36;
+  padding-left: 1rem;
+}
+
+.btn-main {
+  background: #eb5f36 !important;
+  border-color: #eb5f36 !important;
+}
+
+span.id {
+  display: none !important;
+}
+
+div.edit {
+  display: none;
+}
+
+.lh-2 {
+  line-height: 2rem !important;
+}
+
+.btn-up {
+  margin-top: -1rem;
+}
+
+.font-09 {
+  font-size: 0.9rem;
+}
+
+.del-schedule,
+.del-ticket,
+.del-lotte,
+.ticketid,
+.scheduleid,
+.lotteid,
+.add,
+.edit-models,
+.authid {
+  display: none;
+}
+
+textarea {
+  resize: none !important;
+}
+
+.change-img {
+  background-image: url("../img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.pic-edit {
+  background: #f19579;
+  bottom: -17.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.text-primary {
+  color: #eb5f36 !important;
+}
+
+.btn-orange {
+  background: #eb5f36;
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background: #eb5f36;
+  color: #fff;
+}
+
+.adv-title {
+  border-left: 6px #eb5f36 solid;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.li-1 {
+  line-height: 2rem;
+}
+
+.adv-info .modal-title {
+  border-left: 6px #ea3e36 solid;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  padding-left: 0.5rem;
+}
+.adv-info .modal-body {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.adv-btn-info {
+  margin-right: 3rem;
+}
+
+.adv-show {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+  .adv-title {
+    border-left: 3px #ea3e36 solid;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.8rem;
+  }
+
+  .adv-text {
+    padding-left: 1rem;
+  }
+
+  .adv-btn-info {
+    margin-right: 0.5rem;
+  }
+}
+.adv-test {
+  line-height: 2rem;
+  margin-top: 0;
+  padding-left: 2rem;
+}
+
+.tag-list {
+  height: 16.5rem;
+  overflow-y: scroll;
+}
+
+.tag-box {
+  background: #ea3e36;
+  border-radius: 2rem;
+  box-shadow: 0.1rem 0.1rem #aaa;
+  color: #e9e9e9;
+  cursor: pointer;
+  float: left;
+  height: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+}
+
+.advertising .form-control {
+  border: 1px solid #ead1d1;
+  border-radius: 1.5rem;
+}
+.advertising label {
+  line-height: 2rem;
+}
+.advertising .btn {
+  border-radius: 3rem;
+  width: 7rem;
+}
+
+.QRcode {
+  cursor: pointer;
+}
+
+.feedback {
+  background: #580f0f;
+}
+
+/*# sourceMappingURL=style-dashboard.css.map */

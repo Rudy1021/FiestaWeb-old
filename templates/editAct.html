@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% block title %}{{ act_Name }}{% endblock title %}
+{% block content %}
+<span id="showid"></span>
+<section class="content-section bg-light" id="showActivity">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center actmain">
+      <div class="col-5">
+        <h5 class="title"></h5>
+        <hr>
+        <h6>類別</h6>
+        <div class="sort-first">
+        </div>
+        <h6 class="clear-float">活動簡介</h6>
+        <div class="form-group">
+          <textarea class="form-control" id="Description" rows="7"></textarea>
+        </div>
+        <h6>開始時間</h6>
+        <div class="form-group">
+          <input class="form-control startTime" type="text" id="datetimepicker1">
+        </div>
+        <h6>結束時間</h6>
+        <div class="form-group">
+          <input class="form-control endTime" type="text" id="datetimepicker2">
+        </div>
+        <br>
+        <div class="btn-area text-center">
+          <button type="button" class="btn btn-success" id="backstage">後台</button>
+          <button type="button" class="btn btn-primary group-btn advence">進階模組</button>
+          <button type="button" class="btn btn-primary group-btn" id="checkticket">驗票</button>
+          <button type="button" class="btn btn-success" id="update">修改並上傳</button>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center actadvence">
+      <div class="col-5">
+        <h5>此活動為開啟進階模組，是否要開啟進階模組？</h5>
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-md-center actadvence">
+      <div class="col-5">
+        <p>
+          <input type="checkbox" id="mod1" name="mod" value="1" class="check-mod">
+          <label for="mod1">統計人數</label><br>
+          <input type="checkbox" id="mod3" name="mod" value="3" class="check-mod">
+          <label for="mod3">票卷</label><br>
+          <input type="checkbox" id="mod4" name="mod" value="4" class="check-mod">
+          <label for="mod4">活動排程</label><br>
+          <input type="checkbox" id="mod5" name="mod" value="5" class="check-mod">
+          <label for="mod5">即時資訊</label><br>
+          <input type="checkbox" id="mod6" name="mod" value="6" class="check-mod">
+          <label for="mod6">抽獎</label><br>
+          <input type="checkbox" id="mod8" name="mod" value="8" class="check-mod">
+          <label for="mod8">問卷</label><br>
+        </p>
+        <br>
+        <div class="btn-area text-center">
+          <button type="button" class="btn btn-secondary" id="backtomain">返回</button>
+          <button type="button" class="btn btn-success" id="modfornext">下一步</button>
+        </div>
+      </div>
+    </div>
+    <!------------------------------Ticket------------------------------->
+    <div class="choose-ticket" id="choose-ticket">
+      <div class="row justify-content-md-center">
+        <div class="col-5">
+          <h5>票卷設定</h5>
+          <hr>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-5">
+          <div id="ticket-list">
+            <div class="ticket-text ticket-size-1">
+              <input type="text" class="form-control ticketype" placeholder="Ticket type">
+            </div>
+            <div class="ticket-text ticket-size-2">
+              <input type="text" class="form-control ticketquan" placeholder="Quantity">
+            </div>
+            <div class="ticket-text ticket-size-3">
+              <input type="text" class="form-control ticketprice" placeholder="Price">
+              <span class="id"></span>
+            </div>
+            <div>
+              <div class="ticket-text ticket-size-1">
+                <input type="text" class="form-control ticketype" placeholder="Ticket type">
+              </div>
+              <div class="ticket-text ticket-size-2">
+                <input type="text" class="form-control ticketquan" placeholder="Quantity">
+              </div>
+              <div class="ticket-text ticket-size-3">
+                <input type="text" class="form-control ticketprice" placeholder="Price">
+              </div>
+              <div class="ticket-add">
+                <span class="id"></span>
+                <button class="btn btn-danger btn-radius-2 clear-float minus-ticket">–</button>
+              </div>
+            </div>
+            <div>
+              <div class="ticket-text ticket-size-1">
+                <input type="text" class="form-control ticketype" placeholder="Ticket type">
+              </div>
+              <div class="ticket-text ticket-size-2">
+                <input type="text" class="form-control ticketquan" placeholder="Quantity">
+              </div>
+              <div class="ticket-text ticket-size-3">
+                <input type="text" class="form-control ticketprice" placeholder="Price">
+              </div>
+              <div class="ticket-add">
+                <span class="id"></span>
+                <button class="btn btn-danger btn-radius-2 clear-float minus-ticket">–</button>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-add-2 clear-float text-center">
+            <button class="btn btn-info btn-radius add-ticket">+</button>
+          </div>
+          <div class="text-center">
+            <div class="btn-area text-center">
+              <button type="button" class="btn btn-secondary" id="backtoselect">上一步</button>
+
+              <button type="button" class="btn btn-primary" id="goschedule">下一步</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!------------------------------schedule----------------------------->
+
+  <div class="choose-date" id="choose-schedule">
+    <div class="row justify-content-md-center">
+      <div class="col-5">
+        <h5 style="display:inline;">活動排程</h5><span class="text-danger scherror" style="display:none;"></span>
+        <hr>
+        <div class="time-row justify-content-md-center clear-float mt-2 schedulelist">
+          <div class="row mb-2 rc-1">
+            <div class="col-4"><input type="text" class="form-control schetitle" placeholder="時段主題"></div>
+            <div class="col-4"><input type="text" class="form-control schedetail" placeholder="說明"></div>
+            <div class="col-3 pr-0"><span class="showid"></span><input type="text"
+                class="datetimepicker3 form-control schestart" placeholder="開始時間"></div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row mb-2 rc-2">
+            <div class="col-4"><input type="text" class="form-control schetitle" placeholder="時段主題"></div>
+            <div class="col-4"><input type="text" class="form-control schedetail" placeholder="說明"></div>
+            <div class="col-3 pr-0"><input type="text" class="datetimepicker3 form-control schestart"
+                placeholder="開始時間"></div>
+            <div class="col-1 mt-2"><span class="showid"></span><button
+                class="btn btn-danger btn-radius-2 clear-float minus-schedule">–</button>
+            </div>
+          </div>
+        </div>
+        <div class="time-add-2 clear-float text-center">
+          <button class="btn btn-info btn-radius add-schedule">+</button>
+        </div>
+        <div class="text-center">
+          <br>
+          <div class="btn-area text-center">
+            <button type="button" class="btn btn-secondary" id="backtoticket">上一步</button>
+            <button type="button" class="btn btn-primary" id="golotte">下一步</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------Describe----------------------------->
+
+  <div id="choose-lotte" class="choose-lotte">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-5 col-sm-12">
+        <h5 class="all-title" style="display: inline;">抽獎</h5>
+        <hr>
+        <div class="row mb-2">
+          <div class="col">
+            <div id="lottelist">
+              <div class="row mb-2">
+                <div class="col"><input class="form-control lottename" type="text" placeholder="獎項"></div>                
+                <div class="col-1"></div>
+              </div>
+              <div class="row mt-2 mb-2">
+                <div class="col"><input class="form-control lottename" type="text" placeholder="獎項"></div>                
+                <div class="col-1"><button class="btn btn-danger btn-radius-2 clear-float minus-lotte">–</button></div>
+              </div>
+            </div>
+            <div class="time-add-2 clear-float text-center">
+              <button class="btn btn-info mt-2 btn-radius add-lotte">+</button>
+            </div>
+            <div class="btn-area text-center">
+              <button type="button" class="btn btn-secondary" id="backtoschedule">上一步</button>
+
+              <button type="button" class="btn btn-primary justSubmit">送出</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--dashboard-->
+  <div class="row justify-content-md-center dash-board">
+    <div class="col-5">
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" id="backstagetomain">返回</button>
+      </div>
+      <div class="col-12 float-left">
+        <br>
+          <h5 class="all-title">活動總覽</h5>
+      </div>
+      <div class="col-12">
+          <hr>
+      </div>
+      <div class="col pr-0">
+          <div class="create-info br-l-1">
+              <div class="title">辦過的活動</div>
+              <div class="value">-</div>
+          </div>
+      </div>
+      <div class="col pl-1 pr-0">
+          <div class="create-info br-l-1">
+              <div class="title">平均評價</div>
+              <div class="value">-</div>
+          </div>
+      </div>
+      <div class="col pl-1">
+          <div class="create-info br-l-1">
+              <div class="title">總收益</div>
+              <div class="value">-</div>
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/editAct.js') }}?version=1.11"></script>
+{% endblock %}

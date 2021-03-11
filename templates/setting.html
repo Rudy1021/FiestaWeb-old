@@ -1,0 +1,101 @@
+﻿{% extends 'base.html' %}
+{% block title %}Setting{% endblock title %}
+{% block content %}
+<section class="content-section bg-light" id="tempgroup">
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-5 col-sm-12">
+                <h5 class="all-title">個人檔案</h5>
+                <hr>
+                <div class="row justify-content-md-center">
+                    <div class="col-10 text-center">
+                        <div class="profile-pic-area text-center">
+                            <div class="profile-pic-edit text-center">
+                                <!--<form enctype="multipart/form-data" id="uploadForm">
+                                    <div class="text-center">
+                                        <input type="file" name="file" class="text-center mt-2" id="file">
+                                    </div>
+                                </form>-->
+                                <div>
+                                <label class="pic-edit" for="file">編輯圖片<i class="fas fa-pencil-alt"></i></label>
+                                <input type="file" name="file" id="file" class="position-absolute overflow-hidden" style="display:none;">
+                                </div>
+                            </div>
+                            <div class="profile-pic text-center"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-10 profile text-center">
+                        <div class="form-group row">
+                            <label for="profile-userName">真實姓名</label>
+                            <input type="text" disabled readonly class="form-control" id="profile-userName" >
+                        </div>
+                        <div class="form-group row">
+                            <label for="profile-nickName">暱稱</label>
+                            <input type="text" class="form-control" id="profile-nickName">
+                        </div>
+                        <!--
+                        <div class="form-group row">
+                            <label for="profile-name">ID</label>
+                            <input type="text" class="form-control" id="profile-ame" value="u0624009">
+                        </div>
+                        -->
+                        <div class="form-group row">
+                            <label for="profile-email">學校信箱</label>
+                            <input type="email" disabled readonly class="form-control" id="profile-Email">
+                        </div>
+                        <div class="form-group row">
+                            <label for="profile-backupemail">備用信箱</label>
+                            <input type="email" class="form-control" id="profile-backupEmail">
+                        </div>
+                        <div class="form-group row">
+                            <label for="profile-school">所屬學校</label>
+                            <input type="text" disabled readonly class="form-control" id="profile-School">
+                        </div>
+                        <div class="form-group row">
+                            <label for="profile-phone">手機</label>
+                            <div class="row">
+                                <div class="col-3 clear-float m-0 p-0 ml-3 mr-3">
+                                    
+                                        <label class="sr-only" for="inlineFormInputGroup"></label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">+</div>
+                                            </div>
+                                            <input type="tel" id="contry-number" class="form-control">
+                                        </div>
+                                </div>
+                                <div class="col clear-float p-0 ml-3">
+                                    <input type="tel" class="form-control" id="profile-Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row clear-float">
+                            <label for="profile-Birthday">生日</label>
+                            <input type="text" class="form-control" id="profile-Birthday" class="Birthday">
+                        </div>
+                        <div class="form-group row clear-float">
+                            <label for="profile-IDCARD">身份證</label>
+                            <input type="text"  class="form-control" id="profile-IDCARD">
+                        </div>
+                        <div class="form-group row clear-float">
+                            <label for="profile-Range">理想範圍</label><span class=" ml-2 disval">25</span>
+                            <input type="range" class="custom-range" min="0" max="50" step="5" id="customRange3">
+                        </div>
+                        <div class="btn-area text-center mt-3">
+                            <button type="button" class="btn btn-primary" id="email-vail">重發驗證信</button>
+                            <button type="button" class="btn btn-success" id="setting-edit">修改並上傳</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/Setting.js') }}?version=1.13"></script>
+{% endblock %}

@@ -1,0 +1,44 @@
+﻿{% extends 'base.html' %}
+{% block title %}票匣{% endblock title %}
+{% block content %}
+<section class="content-section bg-light pt-3 mt-3" id="ticket">
+    <div class="container-fluid activity-list">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-5 col-sm-12">
+                <div class="row">
+                    <div class="col float-left">
+                        <h5 class="all-title myactitle">您的票匣(點擊票卷可顯示QRcode)</h5>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ticketlist">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="QRModal" tabindex="-1" role="dialog" aria-labelledby="QRModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="QRModalLabel">QRcode</h5>
+              <button type="button" class="close close-sub" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-QR">
+                <img src="" class="QRcode">
+              </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/MyTicket.js') }}?version=1.06"></script>
+{% endblock %}

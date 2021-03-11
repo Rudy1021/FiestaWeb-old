@@ -1,0 +1,43 @@
+﻿{% extends 'base.html' %}
+{% block title %}註冊{% endblock title %}
+{% block content %}
+<section class="content-section p-3" id="bg-fiesta-img">
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-3 pt-3">
+            <div class="col-lg-5 col-sm-12">
+                <h5 class="text-dark signtitle">註冊    <span class="text-danger star">*</span><h6 class="signtitle text-dark">為必填</h6></h5>
+                <hr class="bg-dark">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-sm-12" id="form-bg-white">
+                <label class="text-dark"><span class="text-danger star">*</span>帳號</label>
+                <input type="text" class="form-control" id="userId" autocomplete="userId">
+                <label class="text-dark mt-3"><span class="text-danger star">*</span>密碼<span class="f-08">(請勿與其他欄位相同)</span></label>
+                <input type="password" class="form-control" id="userPassword" autocomplete="current-password">
+                <label class="text-dark mt-3"><span class="text-danger star">*</span>真實姓名</label>
+                <input class="form-control" id="userName" autocomplete="off">
+                <label class="text-dark mt-3">暱稱</label>
+                <input class="form-control" id="nickName" autocomplete="off">
+                <label class="text-dark mt-3"><span class="text-danger star">*</span>學校信箱(第一個英文字請小寫)</label>
+                <input class="form-control" id="Mail_1" autocomplete="off">
+                <label class="text-dark mt-3"><span class="text-danger star">*</span>手機號碼</label>
+                <input class="form-control" id="Phone" autocomplete="off">
+                <label class="text-dark mt-3">所屬學校</label>
+                <input class="form-control" id="School" disabled="disabled" readonly="readonly">
+                <label class="text-dark mt-3">理想活動範圍<span id="range-val" >25</span></label>
+                <input type="range" class="custom-range" min="0" max="50" step="5" id="Distance">
+                <div class="text-center mt-3 mb-3">
+                    <input type="checkbox" class="form-check-input policy" id="policy"><span>我同意</span><a href="/policy" target="_blank">隱私權與個人資料保護政策</a>
+                    <br>
+                    <br>
+                    <button class="btn btn-success" id="signup">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/signup.js') }}?version=1.16"></script>
+{% endblock %}

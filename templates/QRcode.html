@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="content-section pb-5" id="bg-fiesta-img">
+  <div class="check-user success">
+      <div class="title"><i class="fas fa-clipboard-check"></i> 驗票QRcode</div>
+      <img src="" class="QRcodeBig">
+  </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/QRcode.js') }}?version=1.11"></script>
+{% endblock script %}

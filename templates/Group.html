@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Group{% endblock title %}
+{% block content %}
+<span id="gid"></span>
+<span id="mid"></span>
+<section class="content-section bg-light" id="tempgroup">
+    <div class="container-fluid">
+        <div class="CreateGroup" id="CreateGroup">
+            <div class="alert alert-danger danger" role="alert" id="warring">
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-5 col-sm-12 group-info-list">
+                    <h5 class="title-group all-title">建立一個群組<span class="text-danger star">*</span><h6 class="signtitle text-dark">為必填</h6></h5><span class="grouperror" display="none;"></span>
+                    <hr>
+                    <p>
+                        <h7>群組名稱<span class="text-danger star">*</span></h7>
+                        <input type="text" class="form-control groupInput" placeholder="Vocal Show"
+                            id="groupName">
+                    </p>
+                    <p>
+                        <h7>地點</h7><input type="text" class="form-control groupInput"
+                            placeholder="No. 56-9, Aly. 34, Ln. 12, Daxue Rd., East Dist., Hsinchu City 300, Taiwan (R.O.C.)"
+                            id="groupAddress">
+                    </p>
+                    <p>
+                        <h7>信箱</h7><input type="text" class="form-control groupInput" placeholder="abc@nkust.edu.tw"
+                            id="groupEmail">
+                    </p>
+                    <p>
+                        <h7>聯絡電話</h7><input type="text" class="form-control groupInput" placeholder="0987654321" id="groupPhone">
+                    </p>
+                    <p id="member-line" class="member"><h7>新增成員（帳號）</h7><input type="text" class="form-control" id="member"><button class="btn btn-success btn-group add-group-member">新增</button></p>
+                    <hr class="member-hr member">
+                    <div class="member-list"></div>
+                </div>
+            </div>
+            <div class="text-center btn-area">
+                <br>
+                <button type="button" id="back" class="btn btn-secondary">返回</button>
+                <button type="button" id="groupCreate" class="btn btn-success">創建</button>
+            </div>
+        </div>
+        <div class="row justify-content-md-center list">
+            <div class="col-lg-5 col-sm-12">
+                <div>
+                    <div class="col">
+                        <h5 class="all-title">群組列表</h5>
+                    </div>
+                    <div class="col">
+                        <button class="group-btn btn btn-success group-create float-right"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <hr>
+                <ul class="list-group clear-float" id="allgroup">
+                </ul>
+            </div>
+        </div>
+</section>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/getjoinedGroup.js') }}?version=1.18"></script>
+<script src="{{ url_for('static',filename='js/Group.js') }}?version=1.20"></script>
+{% endblock %}

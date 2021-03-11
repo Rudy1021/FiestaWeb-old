@@ -1,0 +1,107 @@
+{% extends 'base-new.html' %}
+{% block content %}
+<div class="activity">
+  <div class="tag">
+    <div class="row tag-list">
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+      <div class="col">
+        <div class="tag-box border-radius-circle"></div>
+        <h6 class="tag-text">asd</h6>
+      </div>
+    </div>
+  </div>
+  <div class="card activity-card border-radius-1">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-2 col-md-1">
+          <div class="activity-icon mr-auto border-radius-circle">
+            <img src="/static/img/new-logo.png" class="activity-icon-img">
+          </div>
+        </div>
+        <div class="col-8 col-md-10">
+          <h5>Fiesta PR Team</h5>
+          <h6>畫廊酒吧/高雄市鼓山區哨船街51號2F</h6>
+        </div>
+        <div class="col-2 col-md-1">
+          <div class="dropdown float-right">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-header">
+                選擇動作
+              </div>
+              <a class="dropdown-item to-edit" href="javascript:;">
+                編輯
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity-img mt-1">
+        <img src="/static/img/bg1.jpg" class="activity-img-img border-radius-2">
+      </div>
+      <div class="mt-3">
+        <h4><small>Old Brand 老牌萬聖派對</small></h4>
+        <span><small>2020-10-31 17:00</small></span>
+        <span class="float-right"><small>
+          #饒舌 #酒吧
+        </small>
+        </span>
+      </div>
+      <div class="text-center mt-3">
+        <div class="btn-group">
+          <button class="btn btn-lg border-radius-2 text-white bg-grey button-buy"><i class="fas fa-ticket-alt"></i> 購票</button>
+          <button class="btn btn-lg border-radius-2 text-white bg-grey button-marks"><i class="fas fa-bookmark"></i> 收藏</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+{% block script %}
+<script src="{{ url_for('static',filename='js/test.js') }}"></script>
+{% endblock script %}
