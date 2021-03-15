@@ -41,7 +41,7 @@ function getSchool() {
   // sch = sch[0];
   $.ajax({
     type: 'GET',
-    url: 'https://fiesta-o2o.tw/Fiestadb/getSchool',
+    url: 'http://163.18.42.222:8888/Fiestadb/getSchool',
     success: function(data) {
       $.each(data.result[0], function(indexInArray, content) {
         if (sch[0] == content) {
@@ -67,7 +67,7 @@ function sendConfirm() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/SendConfirm',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/SendConfirm',
     data: JSON.stringify(dataSendConfirm),
     contentType: 'application/json',
     datatype: JSON,
@@ -159,7 +159,7 @@ function signup() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Account/upload',
+      url: 'http://163.18.42.222:8888/Fiestadb/Account/upload',
       data: JSON.stringify(dataSignup),
       async: false,
       contentType: 'application/json',

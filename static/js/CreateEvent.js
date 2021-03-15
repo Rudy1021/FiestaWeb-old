@@ -135,7 +135,7 @@ function findName() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Group/FIndName',
+      url: 'http://163.18.42.222:8888/Fiestadb/Group/FIndName',
       data: JSON.stringify(dataFindName),
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
@@ -243,7 +243,7 @@ function setMap() {
 function insertProfile() {
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/ValidateLogin',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/ValidateLogin',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -278,7 +278,7 @@ function insertProfile() {
 function getTag() {
   $.ajax({
     type: 'GET',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Tag/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Tag/select',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -564,7 +564,7 @@ function addGroupMember() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Account/Search',
+      url: 'http://163.18.42.222:8888/Fiestadb/Account/Search',
       data: JSON.stringify(dataMember),
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
@@ -643,7 +643,7 @@ function tempGroupUpload(endTime) {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Group/upload',
+    url: 'http://163.18.42.222:8888/Fiestadb/Group/upload',
     data: JSON.stringify(data),
     contentType: 'application/json',
     async: false,
@@ -678,7 +678,7 @@ function uploadActImg(actId) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
     enctype: 'multipart/form-data',
-    url: 'https://fiesta-o2o.tw//Fiestadb/uploadImage?type=act&Id=' + actId,
+    url: 'http://163.18.42.222:8888//Fiestadb/uploadImage?type=act&Id=' + actId,
     data: formData,
     success: function(data) {
     },
@@ -705,7 +705,7 @@ function uploadTicket(actId) {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/upload',
+      url: 'http://163.18.42.222:8888/Fiestadb/Ticket/upload',
       data: JSON.stringify(dataUploadTicket),
       async: false,
       contentType: 'application/json',
@@ -743,7 +743,7 @@ function uploadShow(startTime, actId) {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Show/upload',
+      url: 'http://163.18.42.222:8888/Fiestadb/Show/upload',
       data: JSON.stringify(dataUploadShow),
       async: false,
       contentType: 'application/json',
@@ -772,7 +772,7 @@ function uploadLotte(actId) {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Lotte/upload',
+      url: 'http://163.18.42.222:8888/Fiestadb/Lotte/upload',
       data: JSON.stringify(dataUploadLotte),
       async: false,
       contentType: 'application/json',
@@ -856,7 +856,7 @@ function submitData() {
   }
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/upload',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/upload',
     data: JSON.stringify(data),
     contentType: 'application/json',
     async: false,

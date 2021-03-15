@@ -13,7 +13,7 @@ function getQrcode() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/QRcode',
+    url: 'http://163.18.42.222:8888/Fiestadb/QRcode',
     data: JSON.stringify(dataGetQRcode),
     contentType: 'application/json',
     datatype: JSON,

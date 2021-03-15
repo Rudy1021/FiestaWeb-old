@@ -40,7 +40,7 @@ function getAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/select',
     data: JSON.stringify(dataActId),
     async: false,
     contentType: 'application/json',
@@ -156,7 +156,7 @@ function scoreSubmit() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/FeedBack/Score/Act/upload',
+    url: 'http://163.18.42.222:8888/Fiestadb/FeedBack/Score/Act/upload',
     data: JSON.stringify(dataScore),
     async: false,
     contentType: 'application/json',

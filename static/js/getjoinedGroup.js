@@ -9,7 +9,7 @@ function getJoinedGroup() {
   datagetJoinedGroup = {authId: $.cookie('Id')};
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/getJoinedGroup',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/getJoinedGroup',
     data: JSON.stringify(datagetJoinedGroup),
     contentType: 'application/json',
     datatype: JSON,

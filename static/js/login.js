@@ -57,7 +57,7 @@ function forgot() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/SendConfirm',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/SendConfirm',
     data: JSON.stringify(dataForgot),
     contentType: 'application/json',
     datatype: JSON,
@@ -106,7 +106,7 @@ function login() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/select',
     data: JSON.stringify(dataLogin),
     contentType: 'application/json',
     datatype: JSON,

@@ -167,6 +167,6 @@ if __name__ == "__main__":
     app.jinja_env.auto_reload = True
     app.run(
         host='0.0.0.0',
-        port=5000,
+        port=4567,
         debug=False,
     )

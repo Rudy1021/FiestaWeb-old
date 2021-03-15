@@ -27,7 +27,7 @@ function getRecommend() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/getRecommend',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/getRecommend',
     data: JSON.stringify(dataActid),
     contentType: 'application/json',
     datatype: JSON,
@@ -96,7 +96,7 @@ function getAds() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ads/getRand',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ads/getRand',
     data: JSON.stringify(dataAds),
     contentType: 'application/json',
     datatype: JSON,

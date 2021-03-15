@@ -2,7 +2,7 @@ $(document).ready(function() {
   confirmEmail();
 });
 $(document).on('click', '.buttonclick', function() {
-  location.href = 'https://fiesta-o2o.tw';
+  location.href = 'http://163.18.42.222:8888';
 });
 /**
  * 確認信箱是否驗證成功
@@ -12,7 +12,7 @@ function confirmEmail() {
   token = token.substr(13);
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/ValidateEmail?token=' + token,
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/ValidateEmail?token=' + token,
     success: function(response) {
       if (response.code == '001') {
         $('.success').show();

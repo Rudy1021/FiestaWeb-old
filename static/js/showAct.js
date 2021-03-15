@@ -39,7 +39,7 @@ function setJoinedList() {
   }
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/setJoinedList',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/setJoinedList',
     data: JSON.stringify(datasetJoinedList),
     contentType: 'application/json',
     datatype: JSON,
@@ -138,7 +138,7 @@ function getAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/select',
     data: JSON.stringify(dataActId),
     async: false,
     contentType: 'application/json',
@@ -210,7 +210,7 @@ function getTicket() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/SelectByAct',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ticket/SelectByAct',
     data: JSON.stringify(dataSelectByAct),
     contentType: 'application/json',
     datatype: JSON,
@@ -250,7 +250,7 @@ function getShow() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Show/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Show/select',
     data: JSON.stringify(dataShow),
     contentType: 'application/json',
     datatype: JSON,

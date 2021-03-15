@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
         $.ajax({
             type: "POST",
-            url: "https://fiesta-o2o.tw/Fiestadb/Account/getCreateAct",
+            url: "http://163.18.42.222:8888/Fiestadb/Account/getCreateAct",
             data: JSON.stringify(data),
             contentType: "application/json",
             beforeSend:function(xhr){
@@ -47,7 +47,7 @@ $(document).ready(function () {
         }
         $.ajax({
             type: "POST",
-            url: "https://fiesta-o2o.tw/Fiestadb/Account/getUnexpiredAct",
+            url: "http://163.18.42.222:8888/Fiestadb/Account/getUnexpiredAct",
             data: JSON.stringify(data),
             contentType: "application/json",
             datatype: JSON,

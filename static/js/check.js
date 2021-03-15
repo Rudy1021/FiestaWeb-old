@@ -19,7 +19,7 @@ function vaildTicket() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/vaild',
+      url: 'http://163.18.42.222:8888/Fiestadb/Ticket/vaild',
       data: JSON.stringify(data),
       async: false,
       contentType: 'application/json',

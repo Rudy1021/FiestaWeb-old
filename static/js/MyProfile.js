@@ -49,7 +49,7 @@ function sendConfirm() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/SendConfirm',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/SendConfirm',
     data: JSON.stringify(dataConfirm),
     contentType: 'application/json',
     datatype: JSON,
@@ -78,7 +78,7 @@ function sendConfirm() {
 function validateLogin() {
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/ValidateLogin',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/ValidateLogin',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -147,7 +147,7 @@ function validateLogin() {
 function getReviewStatusProfile() {
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/getReviewStatus',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/getReviewStatus',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -191,7 +191,7 @@ function upDateUserData() {
     data: JSON.stringify(data),
     contentType: 'application/json',
     datatype: JSON,
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/update',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/update',
     success: function(data) {
       // location.reload();
     },
@@ -215,7 +215,7 @@ function changeUserPic() {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
     enctype: 'multipart/form-data',
-    url: 'https://fiesta-o2o.tw/Fiestadb/uploadImage?type=auth&Id=' + $.cookie('Id'),
+    url: 'http://163.18.42.222:8888/Fiestadb/uploadImage?type=auth&Id=' + $.cookie('Id'),
     data: formData,
     success: function(_data) {
       location.reload();

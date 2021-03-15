@@ -104,7 +104,7 @@ function getReviewStatus(id) {
   } else {
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Account/getReviewStatus',
+      url: 'http://163.18.42.222:8888/Fiestadb/Account/getReviewStatus',
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
       },
@@ -173,7 +173,7 @@ function SearchFunc() {
       };
       $.ajax({
         type: 'POST',
-        url: 'https://fiesta-o2o.tw/Fiestadb/Activity/Search',
+        url: 'http://163.18.42.222:8888/Fiestadb/Activity/Search',
         data: JSON.stringify(dataSearch),
         contentType: 'application/json',
         datatype: JSON,

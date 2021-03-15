@@ -65,7 +65,7 @@ function findName() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Group/FIndName',
+      url: 'http://163.18.42.222:8888/Fiestadb/Group/FIndName',
       data: JSON.stringify(dataFindName),
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
@@ -103,7 +103,7 @@ function findName() {
 function insertProfile() {
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/ValidateLogin',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/ValidateLogin',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -167,7 +167,7 @@ function groupInfo(id, name) {
     $.ajax({
       async: false,
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Group/select',
+      url: 'http://163.18.42.222:8888/Fiestadb/Group/select',
       data: JSON.stringify(dataGroupSelect),
       contentType: 'application/json',
       beforeSend: function(xhr) {
@@ -186,7 +186,7 @@ function groupInfo(id, name) {
     $.ajax({
       type: 'POST',
       async: false,
-      url: 'https://fiesta-o2o.tw/Fiestadb/Group/Member/select',
+      url: 'http://163.18.42.222:8888/Fiestadb/Group/Member/select',
       data: JSON.stringify(dataGroupSelect),
       contentType: 'application/json',
       beforeSend: function(xhr) {
@@ -247,7 +247,7 @@ function delMember(id, groupNum, method) {
             };
             $.ajax({
               type: 'POST',
-              url: 'https://fiesta-o2o.tw/Fiestadb/Group/Member/delete',
+              url: 'http://163.18.42.222:8888/Fiestadb/Group/Member/delete',
               data: JSON.stringify(dataMemberDelete),
               contentType: 'application/json',
               beforeSend: function(xhr) {
@@ -281,7 +281,7 @@ function addGroupMember() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Account/Search',
+      url: 'http://163.18.42.222:8888/Fiestadb/Account/Search',
       data: JSON.stringify(dataMember),
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
@@ -333,7 +333,7 @@ function delGroup(GroupNum) {
           dataGroupDelete = {groupId: GroupNum};
           $.ajax({
             type: 'POST',
-            url: 'https://fiesta-o2o.tw/Fiestadb/Group/delete',
+            url: 'http://163.18.42.222:8888/Fiestadb/Group/delete',
             data: JSON.stringify(dataGroupDelete),
             contentType: 'application/json',
             beforeSend: function(xhr) {
@@ -377,7 +377,7 @@ function uploadGroup() {
       };
       $.ajax({
         type: 'POST',
-        url: 'https://fiesta-o2o.tw/Fiestadb/Group/upload',
+        url: 'http://163.18.42.222:8888/Fiestadb/Group/upload',
         data: JSON.stringify(dataGroupUpload),
         contentType: 'application/json',
         beforeSend: function(xhr) {
@@ -429,7 +429,7 @@ function uploadGroup() {
       };
       $.ajax({
         type: 'POST',
-        url: 'https://fiesta-o2o.tw/Fiestadb/Group/update',
+        url: 'http://163.18.42.222:8888/Fiestadb/Group/update',
         data: JSON.stringify(dataGroupUpdate),
         contentType: 'application/json',
         beforeSend: function(xhr) {
@@ -446,7 +446,7 @@ function uploadGroup() {
         };
         $.ajax({
           type: 'POST',
-          url: 'https://fiesta-o2o.tw/Fiestadb/Group/Member/upload',
+          url: 'http://163.18.42.222:8888/Fiestadb/Group/Member/upload',
           data: JSON.stringify(dataMemberUpload),
           contentType: 'application/json',
           beforeSend: function(xhr) {

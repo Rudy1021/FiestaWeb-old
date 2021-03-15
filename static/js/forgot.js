@@ -5,7 +5,7 @@ $(document).ready(function() {
   token = token[2];
   $.ajax({
     type: 'GET',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/ForgetPassword?token=' + token,
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/ForgetPassword?token=' + token,
     async: false,
     success: function(data) {
       if (data.code == '009') {
@@ -23,7 +23,7 @@ $(document).ready(function() {
       };
       $.ajax({
         type: 'POST',
-        url: 'https://fiesta-o2o.tw/Fiestadb/Account/changePassword',
+        url: 'http://163.18.42.222:8888/Fiestadb/Account/changePassword',
         data: JSON.stringify(dataPassword),
         contentType: 'application/json',
         datatype: JSON,
@@ -36,6 +36,6 @@ $(document).ready(function() {
     }
   });
   $(document).on('click', '#sendforgot', function() {
-    location.href = 'https://fiesta-o2o.tw/login';
+    location.href = 'http://163.18.42.222:8888/login';
   });
 });
