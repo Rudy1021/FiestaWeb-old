@@ -92,7 +92,7 @@ function selectAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/select',
     data: JSON.stringify(dataSelectAct),
     contentType: 'application/json',
     async: false,
@@ -142,7 +142,7 @@ function getJoinedList() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/getJoinedList',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/getJoinedList',
     data: JSON.stringify(dataGetJoinedList),
     contentType: 'application/json',
     async: false,
@@ -225,7 +225,7 @@ function getQrcode() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/QRcode',
+    url: 'http://163.18.42.222:8888/Fiestadb/QRcode',
     data: JSON.stringify(dataGetQRcode),
     contentType: 'application/json',
     datatype: JSON,
@@ -242,7 +242,7 @@ function getQrcode() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/QRcode',
+    url: 'http://163.18.42.222:8888/Fiestadb/QRcode',
     data: JSON.stringify(dataGetReviewQRcode),
     contentType: 'application/json',
     datatype: JSON,
@@ -268,7 +268,7 @@ function ticketVaild(button) {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/vaild',
+      url: 'http://163.18.42.222:8888/Fiestadb/Ticket/vaild',
       data: JSON.stringify(dataChange),
       contentType: 'application/json',
       async: false,
@@ -294,7 +294,7 @@ function ticketVaild(button) {
           action: function() {
             $.ajax({
               type: 'POST',
-              url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/updateTicketStatusFalse',
+              url: 'http://163.18.42.222:8888/Fiestadb/Ticket/updateTicketStatusFalse',
               data: JSON.stringify(dataVaildFalse),
               contentType: 'application/json',
               async: false,
@@ -337,7 +337,7 @@ function deleteJoinedList(button) {
           };
           $.ajax({
             type: 'POST',
-            url: 'https://fiesta-o2o.tw/Fiestadb/Activity/deleteJoinedList',
+            url: 'http://163.18.42.222:8888/Fiestadb/Activity/deleteJoinedList',
             data: JSON.stringify(dataDelete),
             contentType: 'application/json',
             async: false,
@@ -370,7 +370,7 @@ function updateAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/update',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/update',
     data: JSON.stringify(dataSave),
     contentType: 'application/json',
     datatype: JSON,

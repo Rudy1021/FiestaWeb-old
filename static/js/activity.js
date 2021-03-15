@@ -86,6 +86,26 @@ function clickAct(card) {
 };
 
 
+function encode(code) {
+  result = "";
+  dataEncode = {
+    "value": code,
+  }
+  $.ajax({
+    type: 'POST',
+    url: 'http://163.18.42.222:8888/encode',
+    data: JSON.stringify(dataEncode),
+    async: false,
+    contentType: 'application/json',
+    datatype: JSON,
+    success: function(data) {
+      result = data.result;
+    },
+  });
+  return result;
+}
+
+
 /**
  * 取得廣告
  */

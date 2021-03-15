@@ -19,7 +19,7 @@ $('#file').change(function() {
 function getTag() {
   $.ajax({
     type: 'GET',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Tag/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Tag/select',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -43,7 +43,7 @@ function deleteAds(id) {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ads/delete',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ads/delete',
     async: false,
     data: JSON.stringify(dataDeleteAds),
     contentType: 'application/json',
@@ -68,7 +68,7 @@ function uploadimg(id) {
     formData.append('file', fileData);
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/uploadImage?type=Ads&Id=' + id,
+      url: 'http://163.18.42.222:8888/Fiestadb/uploadImage?type=Ads&Id=' + id,
       data: formData,
       async: false,
       enctype: 'multipart/form-data',
@@ -104,7 +104,7 @@ function submitAd() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Ads/upload',
+      url: 'http://163.18.42.222:8888/Fiestadb/Ads/upload',
       data: JSON.stringify(dataAdsUpload),
       contentType: 'application/json',
       datatype: JSON,
@@ -131,7 +131,7 @@ function submitAd() {
     };
     $.ajax({
       type: 'POST',
-      url: 'https://fiesta-o2o.tw/Fiestadb/Ads/update',
+      url: 'http://163.18.42.222:8888/Fiestadb/Ads/update',
       data: JSON.stringify(dataAdsupdate),
       contentType: 'application/json',
       datatype: JSON,
@@ -174,7 +174,7 @@ function getAd() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ads/SelectBySource',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ads/SelectBySource',
     data: JSON.stringify(dataGetAd),
     contentType: 'application/json',
     datatype: JSON,
@@ -303,7 +303,7 @@ function showAds(id) {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ads/SelectById',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ads/SelectById',
     async: false,
     data: JSON.stringify(dataShowAds),
     contentType: 'application/json',

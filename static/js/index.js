@@ -15,7 +15,32 @@ $(document).on('click', 'span.act', function() {
 function clickAct(card) {
   body = card.children('.card-body');
   $.cookie('acid', body.children('span.id').html(), {expires: 7}, {path: '/'});
-  location.href = '/Activity/' + body.children('.card-title').html();
+  encodeURL = encode(body.children('.id').html());
+  location.href = '/Activity/' + encodeURL;
+}
+
+
+/**
+ * 
+ * @param {string} code 
+ */
+function encode(code) {
+  result = "";
+  dataEncode = {
+    "value": code,
+  }
+  $.ajax({
+    type: 'POST',
+    url: 'http://163.18.42.222:8888/encode',
+    data: JSON.stringify(dataEncode),
+    async: false,
+    contentType: 'application/json',
+    datatype: JSON,
+    success: function(data) {
+      result = data.result;
+    },
+  });
+  return result;
 }
 
 

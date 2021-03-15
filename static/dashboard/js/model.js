@@ -68,7 +68,7 @@ function selectAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/select',
     data: JSON.stringify(dataSelect),
     contentType: 'application/json',
     async: false,
@@ -106,7 +106,7 @@ function selectTicket() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/SelectByAct',
+    url: 'http://163.18.42.222:8888/Fiestadb/Ticket/SelectByAct',
     data: JSON.stringify(dataSelectByAct),
     contentType: 'application/json',
     beforeSend: function(xhr) {
@@ -170,7 +170,7 @@ function selectShow() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Show/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Show/select',
     data: JSON.stringify(dataSelectShow),
     contentType: 'application/json',
     beforeSend: function(xhr) {
@@ -228,7 +228,7 @@ function selectLotte() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Lotte/select',
+    url: 'http://163.18.42.222:8888/Fiestadb/Lotte/select',
     data: JSON.stringify(dataLotte),
     contentType: 'application/json',
     beforeSend: function(xhr) {
@@ -284,7 +284,7 @@ function updateMod() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/update',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/update',
     data: JSON.stringify(dataUpdateMod),
     async: false,
     beforeSend: function(xhr) {
@@ -352,7 +352,7 @@ function updateTicket() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/upload',
+          url: 'http://163.18.42.222:8888/Fiestadb/Ticket/upload',
           data: JSON.stringify(dataUploadTicket),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -373,7 +373,7 @@ function updateTicket() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/update',
+          url: 'http://163.18.42.222:8888/Fiestadb/Ticket/update',
           data: JSON.stringify(dataUpdateTicket),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -480,7 +480,7 @@ function updateShow() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Show/upload',
+          url: 'http://163.18.42.222:8888/Fiestadb/Show/upload',
           data: JSON.stringify(dataUploadShow),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -501,7 +501,7 @@ function updateShow() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Show/update',
+          url: 'http://163.18.42.222:8888/Fiestadb/Show/update',
           data: JSON.stringify(dataUpdateShow),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -535,7 +535,7 @@ function updateLotte() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Lotte/upload',
+          url: 'http://163.18.42.222:8888/Fiestadb/Lotte/upload',
           data: JSON.stringify(dataUploadLotte),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -554,7 +554,7 @@ function updateLotte() {
         $.ajax({
           type: 'POST',
           async: false,
-          url: 'https://fiesta-o2o.tw/Fiestadb/Lotte/update',
+          url: 'http://163.18.42.222:8888/Fiestadb/Lotte/update',
           data: JSON.stringify(dataUpdateLotte),
           contentType: 'application/json',
           beforeSend: function(xhr) {
@@ -594,7 +594,7 @@ function del(id, type) {
             };
             $.ajax({
               type: 'POST',
-              url: 'https://fiesta-o2o.tw/Fiestadb/Ticket/delete',
+              url: 'http://163.18.42.222:8888/Fiestadb/Ticket/delete',
               data: JSON.stringify(dataDelTicket),
               contentType: 'application/json',
               beforeSend: function(xhr) {
@@ -627,7 +627,7 @@ function del(id, type) {
             };
             $.ajax({
               type: 'POST',
-              url: 'https://fiesta-o2o.tw/Fiestadb/Show/delete',
+              url: 'http://163.18.42.222:8888/Fiestadb/Show/delete',
               data: JSON.stringify(dataDelShow),
               contentType: 'application/json',
               beforeSend: function(xhr) {
@@ -660,7 +660,7 @@ function del(id, type) {
             };
             $.ajax({
               type: 'POST',
-              url: 'https://fiesta-o2o.tw/Fiestadb/Lotte/delete',
+              url: 'http://163.18.42.222:8888/Fiestadb/Lotte/delete',
               data: JSON.stringify(dataDelLotte),
               contentType: 'application/json',
               beforeSend: function(xhr) {

@@ -13,7 +13,7 @@ function getActScore() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/FeedBack/Score/Act/SelectByAct',
+    url: 'http://163.18.42.222:8888/Fiestadb/FeedBack/Score/Act/SelectByAct',
     data: JSON.stringify(dataGetActScore),
     contentType: 'application/json',
     datatype: JSON,

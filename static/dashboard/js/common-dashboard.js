@@ -14,7 +14,7 @@ $(document).on('click', '#sidebarToggle', function() {
 });
 
 
-$(document).on('click', 'a.nav-link', function() {
+$(document).on('click', 'a.createAct', function() {
   $.cookie('actid', $(this).prop('id'), {path: '/'});
   if (location.href != location.hostname + '/dashboard') {
     location.href = '/dashboard';
@@ -55,7 +55,7 @@ function getCreateAct() {
   };
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Account/getCreateAct',
+    url: 'http://163.18.42.222:8888/Fiestadb/Account/getCreateAct',
     data: JSON.stringify(dataGetCreateAct),
     contentType: 'application/json',
     beforeSend: function(xhr) {
@@ -68,7 +68,7 @@ function getCreateAct() {
         $.each(data.result, function(indexInArray, content) {
           idlist.push(content.act_Id);
           actTitle = '<li class="nav-item"><a class="nav' +
-          '-link collapsed " href="javascript:;" id="' +
+          '-link createAct collapsed " href="javascript:;" id="' +
           content.act_Id + '">' +
           '<i class="fas fa-fw fa-bullhorn"></i>' +
           '<span class="all-act-title">' + content.act_Name +
@@ -87,7 +87,7 @@ function getCreateAct() {
 function getExpireAct() {
   $.ajax({
     type: 'POST',
-    url: 'https://fiesta-o2o.tw/Fiestadb/Activity/getExpire',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/getExpire',
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -96,7 +96,7 @@ function getExpireAct() {
       if (data.code == '001') {
         $.each(data.result, function(index, content) {
           actTitle = '<li class="nav-item">' +
-          '<a class="nav-link collapsed " href="javascript:;"' +
+          '<a class="nav-link createAct collapsed " href="javascript:;"' +
            ' id="' + content.act_Id + '">' +
           '<i class="fas fa-fw fa-bullhorn"></i>' +
           '<span class="all-act-title">' + content.act_Name +
@@ -118,9 +118,10 @@ function getExpireAct() {
  */
 function backToIndex() {
   liAct = $('#' + $.cookie('actid')).parent();
-  if ($('a.nav-link').length >= 1) {
+  if ($('a.createAct').length >= 1) {
     if ($.cookie('actid') == undefined) {
-      $.cookie('actid', $('a.nav-link').eq(0).prop('id'), {path: '/'});
+      $.cookie('actid', $('a.createAct').eq(0).prop('id'), {path: '/'});
+      liAct = $('#' + $.cookie('actid')).parent();
     }
     liAct.addClass('active');
     $('#' + $.cookie('actid')).append('<i class="fas fa-angle-down"></i>');
