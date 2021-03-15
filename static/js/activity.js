@@ -80,10 +80,11 @@ function getRecommend() {
  * @param {object} card
  */
 function clickAct(card) {
-  cardBody = card.children('.card-body');
-  $.cookie('acid', cardBody.children('span.id').html(), {expires: 7});
-  location.href = '/Activity/' + cardBody.children('.card-title').html();
-};
+  body = card.children('.card-body');
+  $.cookie('acid', body.children('span.id').html(), {expires: 7}, {path: '/'});
+  encodeURL = encode(body.children('.id').html());
+  location.href = '/Activity/' + encodeURL;
+}
 
 
 function encode(code) {

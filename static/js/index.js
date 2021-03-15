@@ -22,7 +22,7 @@ function clickAct(card) {
 
 /**
  * 
- * @param {string} code 
+ * @param {string} code Id
  */
 function encode(code) {
   result = "";
