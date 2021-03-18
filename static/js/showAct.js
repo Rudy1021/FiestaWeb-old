@@ -136,13 +136,12 @@ function getAct() {
   dataActId = {
     Id: $.cookie('acid'),
   };
+  encode = location.pathname;
+  encode = encode.split('/');
   $.ajax({
-    type: 'POST',
-    url: 'http://163.18.42.222:8888/Fiestadb/Activity/select',
-    data: JSON.stringify(dataActId),
+    type: 'GET',
+    url: 'http://163.18.42.222:8888/Fiestadb/Activity/selectV2?act=' + encode[2],
     async: false,
-    contentType: 'application/json',
-    datatype: JSON,
     beforeSend: function(xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + $.cookie('qsacw'));
     },
@@ -162,6 +161,7 @@ function getAct() {
         $('h6#startTime').html($('h6#startTime').html() + content.startTime);
         $('h6#endTime').html($('h6#endTime').html() + content.endTime);
         $('#act-img').prop('src', content.Photo);
+        $.cookie('acid', content.Id, {expires: 7}, {path: '/'});
       });
       if (joinedCount == peopleMaxium) {
         $('.btn').prop('disabled', 'disabled');

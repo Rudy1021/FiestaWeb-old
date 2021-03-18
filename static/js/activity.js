@@ -87,11 +87,16 @@ function clickAct(card) {
 }
 
 
+/**
+ * encode
+ * @param {string} code 明碼
+ * @return {string} 密碼
+ */
 function encode(code) {
-  result = "";
+  result = '';
   dataEncode = {
-    "value": code,
-  }
+    'value': code,
+  };
   $.ajax({
     type: 'POST',
     url: 'http://163.18.42.222:8888/encode',

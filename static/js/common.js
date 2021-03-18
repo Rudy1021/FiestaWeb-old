@@ -205,5 +205,29 @@ function clickSearch() {
   content = $(this).children('.search-text-parent').children('.search-text');
   title = content.children('.title').html();
   $.cookie('acid', content.children('.actId').html(), {path: '/'});
-  location.href = '/Activity/' + title;
+  encodeURL = encode(body.children('.id').html());
+  location.href = '/Activity/' + encodeURL;
+}
+
+/**
+ *
+ * @param {string} code Id
+ */
+function encode(code) {
+  result = '';
+  dataEncode = {
+    'value': code,
+  };
+  $.ajax({
+    type: 'POST',
+    url: 'http://163.18.42.222:8888/encode',
+    data: JSON.stringify(dataEncode),
+    async: false,
+    contentType: 'application/json',
+    datatype: JSON,
+    success: function(data) {
+      result = data.result;
+    },
+  });
+  return result;
 }
