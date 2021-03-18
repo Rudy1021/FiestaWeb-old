@@ -15,8 +15,8 @@ $(document).ready(function() {
   const o = {
     timeOnlyShowDate: true,
     timeFormat: 'HH:mm',
-    dateFormat: '',
     controlType: 'select',
+    showTime: false,
   };
   $('.startTime').datetimepicker(opt);
   $('.endTime').datetimepicker(opt);
@@ -596,6 +596,26 @@ function addGroupMember() {
         }
       },
     });
+  }
+}
+
+$('#file').change(function() {
+  readURL(this);
+});
+
+/**
+ * 預覽圖片
+ * @param {object} input 取得圖片
+ */
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    img = $(input).parent().parent();
+    reader.onload = function(e) {
+      $(img).css('background-image', 'url(' + e.target.result + ')');
+      $(img).css('cursor', 'grab');
+    };
+    reader.readAsDataURL(input.files[0]);
   }
 }
 

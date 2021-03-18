@@ -167,16 +167,16 @@
             </p>
           </div>
           <div class="row">
-            <div class="col-lg-3 col-sm-3 pr-0">
-              <h6 class="pt-1">活動圖片</h6>
-            </div>
-            <div class="col-5">
-              <input type="file" id="file" name="file">
-            </div>
-            <div class="col-lg-1 col-sm-6"></div>
             <div class="col-lg-3 col-sm-6 float-left"><input type="text" class="form-control" id="peoplemax"
-                placeholder="人數上限"></div>
+              placeholder="人數上限"></div>
           </div>
+          <p>預設圖片（點選下方編輯圖片可以更改圖片）</p>
+            <div class="change-img newimg">
+              <div class="change-text">
+                <label class="pic-edit-create" for="file">編輯圖片<i class="fas fa-pencil-alt"></i></label>
+                <input type="file" name="file" id="file" class="position-absolute overflow-hidden" style="display:none;">
+              </div>
+            </div>
           <br>
           <div class="progress mt-3">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
@@ -290,7 +290,7 @@
     <div class="choose-date" id="choose-schedule">
       <div class="row justify-content-md-center">
         <div class="col-lg-5 col-sm-12">
-          <h5 class="all-title" style="display: inline;">活動排程</h5>
+          <h5 class="all-title" style="display: inline;">活動排程（可手動輸入）</h5>
           <hr>
           <div class="time-row justify-content-md-center clear-float mt-2 schedulelist">
             <div class="row mb-2 rc-1">

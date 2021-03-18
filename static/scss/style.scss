@@ -1783,3 +1783,19 @@ span.step.now {
   padding-left: 0.5rem;
   padding-right: 0.3rem;
 }
+
+.change-img {
+  background-image: url("../img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.pic-edit-create {
+  background: #f19579;
+  bottom: -20rem;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}

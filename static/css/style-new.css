@@ -762,4 +762,20 @@ footer ul.social-buttons li a:hover {
     padding-left: 1rem;
   }
 }
+
+.change-img {
+  background-image: url("../img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.pic-edit {
+  background: #f19579;
+  bottom: -17.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
 /*# sourceMappingURL=style-new.css.map */
